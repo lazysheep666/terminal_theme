@@ -1,0 +1,130 @@
+.recent-post-item 
+#post
+  @extend $box-inner
+  margin-bottom: 1rem
+  padding: 1.5rem 3rem
+  font-size: $post-font-size
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    margin: .5rem 0
+    color: $dark-gray
+    cursor: pointer
+    &::before
+      margin-right: 0.5rem
+      content: "\f02e"
+      color: #574c4c
+      font: normal normal normal 14px / 1 FontAwesome
+      transition: all 0.2s ease-out
+    &:hover
+      color: #000
+      &::before
+        margin-right: .6rem
+        color: #000
+  ol,
+  ul
+    @extend $list
+    li
+      @extend $list-item
+  ul
+    li
+      &::before
+        top: 5px
+        margin-left: 4px
+        width: 6px
+        height: 6px
+        border: 3px solid $dark-gray
+        background-color: $g-bg-color
+  ol
+    counter-reset: li
+    li
+      &::before
+        counter-increment: li
+        content: counter(li)
+  blockquote
+    margin: 0
+    padding: 0 .6rem
+    border-left: .2rem solid #dfe2e5
+    color: #6a737d
+  hr
+    border: 0;
+    border-top: 1px solid #eee
+  code
+    padding: .1rem .2rem
+    color: #1f2d3d
+    font-family: $code-font
+    font-size: 14px
+    word-wrap: break-word
+    background: rgba(27,31,35,.05)
+  img
+    padding: 4px;
+    max-width: 100%;
+    border: 1px solid #eaeefb;
+  strong
+    display: inline-block
+    background-color: #eafdf0
+    &:hover
+      background-color: rgba(125, 255, 179, 1)
+  .article-title
+    display: block
+    padding-bottom: .3rem
+    margin-bottom: .5rem
+    border-bottom: 1px solid #eee
+    font-size: $b-title-size
+    text-decoration: none
+    color: $title-color
+    transition: all .2s ease-in-out
+    &:hover
+      color: $black
+      border-bottom: 1px solid $black
+  .article-date
+    color: #999
+  .article-inner
+    margin: 1rem 0
+  .article-footer
+    padding: 1rem 0
+    border-top: 1px solid #eee
+  .article-more
+    @extend $btn
+    float: right
+  .article-tag
+    @extend $btn
+    position: relative
+    margin-left: 1rem
+    margin-bottom: .3rem
+    padding: 0 5px 0 10px
+    border-radius: 0 5px 5px 0
+    line-height: 18px
+    &:hover::before
+      border-right-color: #000
+    &::before
+      content: " "
+      position: absolute
+      top: 0
+      left: -18px
+      width: 0
+      height: 0
+      border: 9px solid transparent
+      border-right-color: #4d4d4d
+      transition: all .2s ease-in-out
+    &::after
+      content: " "
+      position: absolute
+      top: 7px
+      left: 2px
+      width: 4px
+      height: 4px
+      border-radius: 100%
+      background-color: #fff
+
+
+@media screen and (max-width: $sm)
+  .recent-post-item
+  #post
+    padding-left: .5rem
+    padding-right: .5rem
+    .article-title
+      font-size: $s-title-size

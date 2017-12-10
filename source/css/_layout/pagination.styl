@@ -1,0 +1,34 @@
+#pagination
+  .pagination
+    @extend $box-inner
+    background-color: $g-bg-color
+    border: 0
+    box-shadow: none
+    text-align: center
+  .page-number
+    display: inline-block
+    margin: 0 .2rem
+    height: 1.2rem
+    min-width: 1.2rem
+    line-height: 1.2rem
+    text-align: center
+    cursor: pointer
+    &:hover
+      text-decoration: none
+      color: #000
+    &.current
+      cursor: default
+      color: #fff
+      background-color: #000
+  .page-prev,
+  .page-next
+    font-size: 14px
+    &:hover
+      a
+        text-decoration: none
+        color: #000
+    i
+      margin-right: .3rem
+  .page-next
+    i
+      margin-left: .3rem

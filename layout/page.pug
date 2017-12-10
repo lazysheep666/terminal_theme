@@ -1,0 +1,9 @@
+extends includes/layout.pug
+block content
+  if page.title === 'tags'
+    .tag-cloud
+      .tag-cloud-title= page.title + ' - '
+        span.tag-cloud-num= site.tags.length
+      .tag-cloud-tags!= tagcloud({min_font: 12, max_font: 30, amount: 200, color: true, start_color: '#A4D8FA', end_color: '#0790E8'})
+  if page.title === 'selfie'
+    .pic

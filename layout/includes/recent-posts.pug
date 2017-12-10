@@ -1,0 +1,12 @@
+each article in page.posts.data
+  .recent-post-item
+    - var url = article.link || article.path
+      a.article-title(href=url_for(url))= article.title || 'No Title'
+      time.article-date #[i(class="fa fa-calendar" aria-hidden="true")] !{date(article.date, config.date_format)}
+      .article-inner!= article.excerpt || article.content
+      .article-footer
+        a.article-more(href=url_for(url) + '#more') more>>
+        .article-tags
+          i(class="fa fa-tag" aria-hidden="true")
+          each tag in article.tags.data
+            a.article-tag(href=url_for('tags/' + tag.name))= tag.name
