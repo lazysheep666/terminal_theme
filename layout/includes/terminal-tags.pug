@@ -1,0 +1,7 @@
+br
+br
+| > #{objName}.all 
+br
+each val in site.tags.data
+  a(href='#'+val.name class="tag")
+    span= val.name
