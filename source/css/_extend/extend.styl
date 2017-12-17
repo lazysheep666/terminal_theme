@@ -1,0 +1,52 @@
+$layout-container
+  padding 1rem
+$layout-inner
+  margin: 0 auto
+  width: 35rem
+  border-radius: 7px
+  box-shadow: 0px 3px 20px 0.5px rgba(0,0,0,0.19)
+
+$btn
+  display: inline-block
+  padding: 5px 8px
+  text-decoration: none
+  font-size: 12px
+  font-family: $cute-font
+  color: #fff
+  background-color: #4d4d4d
+  transition: all .2s ease-in-out
+  &:hover
+    background-color: #000
+
+$list
+  margin-top: .4rem
+  padding: 0 0 0 .8rem
+  list-style: none
+
+$list-item
+  position: relative
+  margin: .2rem 0
+  padding: .1rem .5rem .1rem 1.5rem
+  &:before
+    position: absolute
+    left: 0
+    top: 0
+    margin-right: 4px
+    margin-top: 4px
+    width: 24px
+    height: 24px
+    border-radius: 100%
+    content: ''
+    line-height: 24px
+    text-align: center
+    color: #fff
+    background-color: $dark-gray
+
+@media screen and (min-width: $md)
+  $box-inner
+    width: 42.5rem
+    background-color: #fff
+
+@media screen and (max-width: $sm)
+  $layout-inner
+    width: 100%

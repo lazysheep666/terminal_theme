@@ -21,9 +21,11 @@ html(lang=config.language)
       each url in theme.third_party.js
         script(src=url)            
     link(rel="icon", href=config.root + 'img/favicon.ico')
+  //- body
   body
-    #header-outer
-      #header-inner
+    nav#nav-bar
+      include ./nav.pug
+    header#header-info
         include ./header.pug                              
     #content-outer
       #content-inner

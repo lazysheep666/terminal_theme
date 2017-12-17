@@ -1,41 +1,12 @@
-#header-nav
-  padding: 10px 1.8rem
-  width: 100%
-  font-size: $nav-size
-  
-  &.fixed
-    position: fixed
-    top: -60px
-    left: 0
-    background-color: #fff
-    box-shadow: 0 5px 6px -5px rgba(133,133,133,.6)
-    z-index: 999
-    transition .2s all ease-in-out
-  &.visible
-    top: 0px
-  a
-    text-decoration: none
-    color: $gray
-    &:hover
-      color: $black
-  .site-page
-    padding: .5rem
-    padding-left: 1rem
-  #toggle-nav
-    color: $gray
-    display: none
-    &:hover
-      color: $black
+#header-info
+  margin-bottom: 10px
 
-#page-home
-  font-family: $home-font
-  font-weight: bold
-
-#site-info 
-  @extend $box-outer
+#header-container
+  @extend $layout-container
+  padding-top: 5rem
 
 #terminal-pl
-  @extend $box-inner
+  @extend $layout-inner
   font-family: $cute-font
 
 #top-bar
@@ -83,32 +54,8 @@
   .tag
     display: inline-block
     margin-right: 5px
-    
+
 @media screen and (max-width: $sm)
-  #header-nav
-    #toggle-nav
-      display: block
-      padding: .6rem
-      cursor: pointer
-    .in
-      visibility: visible !important
-      opacity: 1 !important
-      transform: translateY(0px) !important
-    #navs
-      visibility: hidden
-      position: absolute
-      top: 4rem
-      right: 1rem
-      width: 170px
-      background: #fff
-      opacity: 0
-      z-index: 999
-      box-shadow: 0 5px 10px 2px rgba(0,0,0,.2);
-      transform: translateY(-20px)
-      transition .2s all ease-in-out
-      a
-        display: block
-        color: #777
-        &:hover
-          color: #000
+  #code-pl
+    height: 200px
 

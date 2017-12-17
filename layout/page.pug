@@ -9,7 +9,8 @@ block content
           each post in site.posts.data
             each tag in post.tags.data
               if tag.name === val.name
-                .post-title= post.title
+                .post-title
+                  a(href=url_for(post.path))= post.title
                 hr
   if page.title === 'selfie'
     .pic

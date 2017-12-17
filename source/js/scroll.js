@@ -16,7 +16,7 @@
   * @return {boolean}
   */
   function isOverHeaderNav (currentTop) {
-    let height = HEADER_NAV.clientHeight
+    let height = NAV.clientHeight
     return currentTop > height
   }
 
@@ -24,20 +24,16 @@
   * main
   */
   let initTop = 0
-  const HEADER_NAV = document.getElementById('header-nav')
-  const HEADER_INNER = document.getElementById('header-inner')
-  let navHeight = HEADER_NAV.clientHeight
+  const NAV = document.getElementById('nav-bar')
   window.onscroll = function () {
     let currentTop = document.documentElement.scrollTop || document.body.scrollTop
     if (isScrollDown(currentTop) && isOverHeaderNav(currentTop)) {
-      HEADER_INNER.style.paddingTop = navHeight + 'px'
-      HEADER_NAV.classList.add('fixed')
-      HEADER_NAV.classList.remove('visible')
-    } else if (!isScrollDown(currentTop) && HEADER_NAV.classList.contains('fixed')) {
-      HEADER_NAV.classList.add('visible')
+      NAV.classList.add('fixed')
+      NAV.classList.remove('visible')
+    } else if (!isScrollDown(currentTop) && NAV.classList.contains('fixed')) {
+      NAV.classList.add('visible')
       if (currentTop === 0) {
-        HEADER_NAV.classList.remove('fixed')
-        HEADER_INNER.style.paddingTop = 0 + 'px'
+        NAV.classList.remove('fixed')
       }
     }
   }

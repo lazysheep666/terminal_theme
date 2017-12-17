@@ -1,0 +1,8 @@
+nav#nav-container.clear-fix
+    #page-home.pull-left
+      a(href=url_for('/'))= config.title
+    i(class="fa fa-bars pull-right" id="toggle-nav" aria-hidden="true")
+    ul#navs.pull-right
+      each url, name in theme.menu
+        li
+          a(class='nav' href=url_for(url))= name

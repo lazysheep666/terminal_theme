@@ -1,0 +1,69 @@
+#nav-bar
+  position: absolute
+  margin-bottom: 20px
+  width: 100%
+  font-size: $nav-size
+  font-weight bold
+  &.fixed
+    position: fixed
+    top: -60px
+    left: 0
+    background-color: #fff
+    box-shadow: 0 5px 6px -5px rgba(133,133,133,.6)
+    z-index: 999
+    transition(.2s)
+  &.visible
+    top: 0px
+  #nav-container
+    padding: 0 1.5rem
+    ul
+      margin: 0
+      padding: 0
+    li
+      display: inline-block
+      list-style none
+    a
+      display: block
+      padding: 10px
+      text-decoration: none
+      &:hover
+        color: $black
+    #toggle-nav
+      display: none
+      padding: 12px
+      cursor: pointer
+      color: $dark-gray
+      &:hover
+        color: $black
+
+@media screen and (max-width: $sm)
+  #nav-bar
+    #nav-container
+      ul
+        padding 2px 8px
+      li
+        display: block
+      #toggle-nav
+        display: block !important
+      .in
+        visibility: visible !important
+        opacity: 1 !important
+        -webkit-transform: translateY(0px) !important
+        -ms-transform: translateY(0px) !important
+        -o-transform: translateY(0px) !important
+        transform: translateY(0px) !important
+      #navs
+        visibility: hidden
+        position: absolute
+        top: 3rem
+        right: 1rem
+        min-width: 170px
+        background: #fff
+        opacity: 0
+        z-index: 999
+        box-shadow: 0 5px 10px 2px rgba(0,0,0,.2);
+        -webkit-transform: translateY(-20px) 
+        -ms-transform: translateY(-20px) 
+        -o-transform: translateY(-20px) 
+        transform: translateY(-20px)
+        transition(.2s)
