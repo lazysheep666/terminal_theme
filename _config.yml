@@ -11,6 +11,7 @@ menu:
 
 # customize your terminal panel
 terminal:
+  #Home
   Blog:
     purpose: 
       typ: string
@@ -22,6 +23,7 @@ terminal:
       typ: link
       val: check here
       url: https://github.com/lazysheep666/lazysheep666.github.io
+  #About
   Sheep:
     locations: 
       typ: array
@@ -36,13 +38,20 @@ terminal:
       typ: link
       val: github.com/lazysheep666
       url: https://github.com/lazysheep666
-    mail: 
-      typ: link
-      val: mail to Sheep
-      url: mailto:714201376@qq.com
+  #Tages
   Tags:
+  #Selfie
   Selfie:
+    show:
+      typ: null
+      val: null
 
+#social media
+#name: url
+social:
+  github: https://github.com/lazysheep666
+  weibo: https://weibo.com/u/5318061001
+  
 # Miscelaneous
 favicon: /favicon.ico
 

@@ -22,7 +22,7 @@ else if page.title === 'selfie'
     br
     | #{config.author}:~ Desktop$ 
     span(class="code-pl-input") node #{fileName}.js
-    if theme.terminal[objName] !== null && flag !==2
+    if theme.terminal[objName] !== null
       each obj, key in theme.terminal[objName]
         br
         br
@@ -37,6 +37,9 @@ else if page.title === 'selfie'
           | [
           span.answer= obj.val.split(' ').join(', ')
           | ]
-    else if flag === 2
+    if flag === 2
       include ./terminal-tags.pug
+    else if flag === 3
+      include ./terminal-selfie.pug
+      
       
