@@ -9,6 +9,8 @@ else if page.title === 'tags'
   - flag = 2
 else if page.title === 'selfie'
   - flag = 3
+else if is_post()
+  - flag = 4
 - var objName = objNames[flag]
 #terminal-pl
   #top-bar
@@ -18,7 +20,7 @@ else if page.title === 'selfie'
       li.btn
     #file-path #[i(class="fa fa-folder folder-ic" aria-hidden="true")] #{config.author} 10 X 10
   #code-pl
-    | Last updated: #{date(Date.now())}
+    | Last updated: #{date(page.date, config.date_format)}
     br
     | #{config.author}:~ Desktop$ 
     span(class="code-pl-input") node #{fileName}.js
@@ -38,8 +40,11 @@ else if page.title === 'selfie'
           span.answer= obj.val.split(' ').join(', ')
           | ]
     if flag === 2
-      include ./terminal-tags.pug
+      include ./terminal/terminal-tags.pug
     else if flag === 3
-      include ./terminal-selfie.pug
+      include ./terminal/terminal-selfie.pug
+    else if flag === 4
+      include ./terminal/terminal-post.pug
+      
       
       

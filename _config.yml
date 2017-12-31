@@ -45,6 +45,8 @@ terminal:
     show:
       typ: null
       val: null
+  #Post
+  Post:
 
 #social media
 #name: url

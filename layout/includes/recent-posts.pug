@@ -9,4 +9,4 @@ each article in page.posts.data
         .article-tags
           i(class="fa fa-tag" aria-hidden="true")
           each tag in article.tags.data
-            a.article-tag(href=url_for('tags/' + tag.name))= tag.name
+            a.article-tag(href=url_for('tags/#' + tag.name))= tag.name
