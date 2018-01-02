@@ -1,4 +1,4 @@
-(function toggleNavModule () {
+const __SheepNav__ = (function NavModule () {
   /**
   * toggle the nav
   * when in the mobile terminal
@@ -20,17 +20,8 @@
     NAVS.classList.remove('in')
   }
 
-  /**
-  * main
-  */
-  const HTML = document.documentElement
-  HTML.addEventListener('click', (e) => {
-    const TOGGLE_NAV = document.getElementById('toggle-nav')
-    if (e.target === TOGGLE_NAV) {
-      toggleNav()
-    } else if (!e.target.classList.contains('site-page')) {
-      hideNav()
-    }
-  },
-  false)
+  return {
+    hideNav,
+    toggleNav
+  }
 })()

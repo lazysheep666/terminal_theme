@@ -7,7 +7,6 @@ menu:
   Home: /
   About: /about
   Tags: /tags
-  Selfie: /selfie
 
 # customize your terminal panel
 terminal:
@@ -38,13 +37,8 @@ terminal:
       typ: link
       val: github.com/lazysheep666
       url: https://github.com/lazysheep666
-  #Tages
+  #Tags
   Tags:
-  #Selfie
-  Selfie:
-    show:
-      typ: null
-      val: null
   #Post
   Post:
 
@@ -63,8 +57,9 @@ stylesheets:
 
 # scripts loaded in the end of the body
 scripts:
-- /js/toggle_nav.js
+- /js/nav.js
 - /js/scroll.js
+- /js/index.js
 # the third-party loaded in the head
 third_party:
   js:
