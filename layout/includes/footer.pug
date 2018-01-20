@@ -1,8 +1,9 @@
 #footer-inner
   .social-icons
-    each url, name in theme.social
-      a.social-icon(href=url target="_blank")
-        i.fa(class='fa-'+name)
+    if theme.social !== null
+      each url, name in theme.social
+        a.social-icon(href=url target="_blank")
+          i.fa(class='fa-'+name)
   p.design-info
     | power by #[a(href="https://hexo.io" target="_blank") Hexo] | theme #[a(href="https://github.com/lazysheep666/terminal_theme" target="_blank") Teminal]
   p.copyright= `Copyright © ${config.author} Blog ${new Date().getFullYear()}` 
