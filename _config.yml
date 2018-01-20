@@ -12,31 +12,31 @@ menu:
 terminal:
   #Home
   Blog:
-    # purpose: 
-    #   typ: string
-    #   val: Sharing something interesting in my limited life.
-    # author: 
-    #   typ: string
-    #   val: LazySheep
-    # more:
-    #   typ: link
-    #   val: check here
-    #   url: https://github.com/lazysheep666/lazysheep666.github.io
+    purpose: 
+      typ: string
+      val: Sharing something interesting in my limited life.
+    author: 
+      typ: string
+      val: LazySheep
+    more:
+      typ: link
+      val: check here
+      url: https://github.com/lazysheep666/lazysheep666.github.io
   #About
-  Me:
-    # locations: 
-    #   typ: array
-    #   val: Beijng Chongqing
-    # education:
-    #   typ: string
-    #   val: BUPT
-    # interests:
-    #   typ: array
-    #   val: coding basketball sleeping reading
-    # github:
-    #   typ: link
-    #   val: github.com/lazysheep666
-    #   url: https://github.com/lazysheep666
+  Sheep:
+    locations: 
+      typ: array
+      val: Beijng Chongqing
+    education:
+      typ: string
+      val: BUPT
+    interests:
+      typ: array
+      val: coding basketball sleeping reading
+    github:
+      typ: link
+      val: github.com/lazysheep666
+      url: https://github.com/lazysheep666
   #Tags
   Tags:
   #Post
