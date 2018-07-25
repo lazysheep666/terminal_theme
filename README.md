@@ -1,6 +1,6 @@
 ## A theme based on hexo
 
-### To use this theme, there are something you  have to do first.
+### Usage
 
 - Due to the template is based on the **pug**，making sure that you have installed the **hexo-renderer-jad** by `npm install --save-dev hexo-renderer-jade`.
 
