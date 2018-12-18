@@ -9,3 +9,7 @@
 - Due to my own demand, i did nothing to the catagories, archievs, and tags which are supported by the **hexo**.
 
 - The **config file** is `_config.yml`.
+
+### Live Demo
+
+[blog.lazysheep.fun](blog.lazysheep.fun)
