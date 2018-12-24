@@ -12,7 +12,7 @@
 
 ### Preview
 
-![](http://img.lazysheep.fun/Screen%20Shot%202018-12-24%20at%2011.07.15%20PM.png)
+![](/preview.png)
 
 ### Live Demo
 
