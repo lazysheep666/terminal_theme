@@ -10,6 +10,10 @@
 
 - The **config file** is `_config.yml`.
 
+### Preview
+
+![](http://img.lazysheep.fun/Screen%20Shot%202018-12-24%20at%2011.07.15%20PM.png)
+
 ### Live Demo
 
 [blog.lazysheep.fun](https://blog.lazysheep.fun)
