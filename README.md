@@ -12,7 +12,7 @@
 
 ### Preview
 
-![](/preview.png)
+![](./Preview.png)
 
 ### Live Demo
 
