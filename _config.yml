@@ -1,42 +1,39 @@
 
 # html lang
-language: en
+language: zh-Hans
 
 # main menu navigation
 menu:
   Home: /
-  About: /about
+  About: /about/about
   Tags: /tags
 
 # customize your terminal panel
 terminal:
   #Home
   Blog:
-    purpose: 
+    motto: 
       typ: string
-      val: Sharing something interesting in my limited life.
+      val: Using strength, being weak. Being the root of the world.
     author: 
       typ: string
-      val: LazySheep
+      val: cifangyiquan
     more:
       typ: link
-      val: check here
-      url: https://github.com/lazysheep666/lazysheep666.github.io
+      val: http://cifangyiquan.coding.me
+      url: http://cifangyiquan.coding.me
   #About
-  Sheep:
+  cifangyiquan:
     locations: 
-      typ: array
-      val: Beijng Chongqing
-    education:
       typ: string
-      val: BUPT
+      val: Beijng
     interests:
       typ: array
-      val: coding basketball sleeping reading
+      val: coding acg 
     github:
       typ: link
-      val: github.com/lazysheep666
-      url: https://github.com/lazysheep666
+      val: github.com/hd264
+      url: https://github.com/hd264
   #Tags
   Tags:
   #Post
@@ -45,8 +42,7 @@ terminal:
 #social media
 #name: url
 social:
-  # github: https://github.com/lazysheep666
-  # weibo: https://weibo.com/u/5318061001
+  # github: https://github.com/hd264
   
 # Miscelaneous
 favicon: /favicon.ico
