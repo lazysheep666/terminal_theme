@@ -5,7 +5,7 @@ language: zh-Hans
 # main menu navigation
 menu:
   Home: /
-  About: /about/about
+  About: /about
   Categories: /categories
   Tags: /tags
 
@@ -21,13 +21,16 @@ terminal:
       val: LazySheep
     more:
       typ: link
-	  val: check here
+      val: check here
       url: https://github.com/lazysheep666/lazysheep666.github.io
   #About
   Sheep:
     locations: 
       typ: array
       val: Beijng Chongqing
+    education: 
+      typ: string
+      val: BUPT
     interests:
       typ: array
       val: coding basketball sleeping reading
@@ -43,8 +46,8 @@ terminal:
 #social media
 #name: url
 social:
-	# github: https://github.com/lazysheep666
-	# weibo: https://weibo.com/u/5318061001
+  # github: https://github.com/lazysheep666
+  # weibo: https://weibo.com/u/5318061001
   
 # Miscelaneous
 favicon: /favicon.ico
@@ -66,3 +69,4 @@ third_party:
     velocity-ui: /js/third-party/velocity.ui.min.js 
   css:
     font-awsome: https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+
