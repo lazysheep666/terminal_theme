@@ -13,28 +13,28 @@ menu:
 terminal:
   #Home
   Blog:
-    motto: 
+    purpose: 
       typ: string
-      val: Using strength, being weak. Being the root of the world.
+      val: Sharing something interesting in my limited life.
     author: 
       typ: string
-      val: cifangyiquan
+      val: LazySheep
     more:
       typ: link
-      val: http://cifangyiquan.coding.me
-      url: http://cifangyiquan.coding.me
+	  val: check here
+      url: https://github.com/lazysheep666/lazysheep666.github.io
   #About
-  cifangyiquan:
+  Sheep:
     locations: 
-      typ: string
-      val: Beijng
+      typ: array
+      val: Beijng Chongqing
     interests:
       typ: array
-      val: coding acg 
+      val: coding basketball sleeping reading
     github:
       typ: link
-      val: github.com/hd264
-      url: https://github.com/hd264
+      val: github.com/lazysheep666
+      url: https://github.com/lazysheep666
   #Tags
   Tags:
   #Post
@@ -43,7 +43,8 @@ terminal:
 #social media
 #name: url
 social:
-  # github: https://github.com/hd264
+	# github: https://github.com/lazysheep666
+	# weibo: https://weibo.com/u/5318061001
   
 # Miscelaneous
 favicon: /favicon.ico
