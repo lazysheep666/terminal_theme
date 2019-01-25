@@ -1,0 +1,8 @@
+br
+br
+| > #{objName}.all 
+br
+each val in site.categories.data
+  a(href='#'+val.name class="category")
+    span= val.name
+  br
