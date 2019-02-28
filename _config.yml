@@ -1,11 +1,12 @@
 
 # html lang
-language: en
+language: zh-Hans
 
 # main menu navigation
 menu:
   Home: /
   About: /about
+  Categories: /categories
   Tags: /tags
 
 # customize your terminal panel
@@ -27,7 +28,7 @@ terminal:
     locations: 
       typ: array
       val: Beijng Chongqing
-    education:
+    education: 
       typ: string
       val: BUPT
     interests:
@@ -68,3 +69,4 @@ third_party:
     velocity-ui: /js/third-party/velocity.ui.min.js 
   css:
     font-awsome: https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+

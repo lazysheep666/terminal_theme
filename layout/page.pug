@@ -12,6 +12,18 @@ block content
                 .post-title
                   a(href=url_for(post.path))= post.title
                 hr
+  if page.title == 'categories'
+    each val in site.categories.data
+      .one-category-list
+        i.fa.fa-folder.fa-2x
+        span(id=val.name class="category-title")= val.name
+        .post-preview
+          each post in site.posts.data
+            each category in post.categories.data
+              if category.name === val.name
+                .post-title
+                  a(href=url_for(post.path))= post.title
+                hr
   if page.title === 'selfie'
     .pic
   

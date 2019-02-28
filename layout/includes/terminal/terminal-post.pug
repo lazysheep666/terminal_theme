@@ -1,5 +1,13 @@
 br
 br
+if page.categories
+  | > #{objName}.category
+  br
+  each val in page.categories.data
+    a(href='/categories/#' + val.name class="category")
+      span= val.name
+  br
+  br
 if page.tags.data
   | > #{objName}.tags 
   br
