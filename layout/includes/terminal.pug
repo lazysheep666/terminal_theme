@@ -7,8 +7,10 @@ if page.title === 'about'
   - flag = 1
 else if page.title === 'tags'
   - flag = 2
-else if is_post()
+else if page.title === 'categories'
   - flag = 3
+else if is_post()
+  - flag = 4
 - var objName = objNames[flag]
 #terminal-pl
   #top-bar
@@ -40,6 +42,8 @@ else if is_post()
     if flag === 2
       include ./terminal/terminal-tags.pug
     else if flag === 3
+      include ./terminal/terminal-categories.pug
+    else if flag === 4
       include ./terminal/terminal-post.pug
       
       
