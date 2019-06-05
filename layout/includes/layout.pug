@@ -1,5 +1,8 @@
-- var pageTitle = page.title || config.description || config.title || config.subtitle || ''
-- pageTitle += ' | ' + config.title
+- var pageTitle = page.title || ''
+if pageTitle != ''
+    - pageTitle += ' | ' + config.title
+else
+    - pageTitle = config.title
 
 doctype html
 html(lang=config.language)
