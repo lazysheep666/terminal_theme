@@ -14,7 +14,7 @@ html(lang=config.language)
     if theme.stylesheets !== undefined && theme.stylesheets.length > 0
       //- stylesheets list from config.yml
       each url in theme.stylesheets
-        link(rel='stylesheet', href=url)
+        link(rel='stylesheet', href=config.url+url)
     if theme.third_party.css !== undefined
       //- the third-party of css from config.yml
       each url in theme.third_party.css
@@ -22,7 +22,7 @@ html(lang=config.language)
     if theme.third_party.js !== undefined 
       //- the third-party of js from config.yml
       each url in theme.third_party.js
-        script(src=url)            
+        script(src=config.url+url)            
     link(rel="icon", href=config.root + 'img/favicon.ico')
   //- body
   body
@@ -42,4 +42,4 @@ html(lang=config.language)
     if theme.scripts !== undefined && theme.scripts.length > 0
       //- scripts list from config.yml
       each url in theme.scripts
-        script(src=url)
+        script(src=config.url+url)
