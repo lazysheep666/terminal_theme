@@ -6,7 +6,6 @@ language: zh-Hans
 menu:
   Home: /
   About: /about
-  Categories: /categories
   Tags: /tags
 
 # customize your terminal panel
