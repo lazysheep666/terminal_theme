@@ -12,31 +12,34 @@ menu:
 terminal:
   #Home
   Blog:
-    purpose: 
+    slogan: 
       typ: string
-      val: Sharing something interesting in my limited life.
+      val: No code no life.
     author: 
       typ: string
-      val: LazySheep
+      val: NekoDaemon
+    license:
+      typ: string
+      val: CC BY-SA 4.0
     more:
       typ: link
-      val: check here
-      url: https://github.com/lazysheep666/lazysheep666.github.io
+      val: GitHub
+      url: https://github.com/Tonny-Gu
   #About
-  Sheep:
+  NekoDaemon:
     locations: 
       typ: array
-      val: Beijng Chongqing
+      val: Shenzhen
     education: 
       typ: string
-      val: BUPT
+      val: Southern University of bullShit and Trash
     interests:
       typ: array
-      val: coding basketball sleeping reading
+      val: Embedded / Distributed / Heterogeneous System
     github:
       typ: link
-      val: github.com/lazysheep666
-      url: https://github.com/lazysheep666
+      val: github.com/Tonny-Gu
+      url: https://github.com/Tonny-Gu
   #Tags
   Tags:
   #Post
