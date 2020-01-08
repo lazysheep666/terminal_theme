@@ -1,0 +1,15 @@
+br
+br
+| > Tags.all
+br
+each val in site.tags.data
+  a(href='/tags/#'+val.name class="tag")
+    span= val.name
+br
+br
+| > Categories.all 
+br
+each val in site.categories.data
+  a(href='/categories/#'+val.name class="category")
+    span= val.name
+  br

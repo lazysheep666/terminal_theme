@@ -5,8 +5,9 @@ language: zh-Hans
 # main menu navigation
 menu:
   Home: /
-  About: /about
   Tags: /tags
+  Categories: /categories
+  About: /about
 
 # customize your terminal panel
 terminal:
@@ -14,22 +15,9 @@ terminal:
   Blog:
     slogan: 
       typ: string
-      val: No code no life.
-    author: 
-      typ: string
-      val: NekoDaemon
-    license:
-      typ: string
-      val: CC BY-SA 4.0
-    more:
-      typ: link
-      val: GitHub
-      url: https://github.com/Tonny-Gu
+      val: No code no life. -- NekoDaemon
   #About
   NekoDaemon:
-    locations: 
-      typ: string
-      val: Shenzhen
     education: 
       typ: string
       val: Southern University of bullShit and Trash
@@ -42,6 +30,8 @@ terminal:
       url: https://github.com/Tonny-Gu
   #Tags
   Tags:
+  #Categories
+  Categories:
   #Post
   Post:
 
