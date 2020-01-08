@@ -28,13 +28,13 @@ terminal:
   #About
   NekoDaemon:
     locations: 
-      typ: array
+      typ: string
       val: Shenzhen
     education: 
       typ: string
       val: Southern University of bullShit and Trash
     interests:
-      typ: array
+      typ: string
       val: Embedded / Distributed / Heterogeneous System
     github:
       typ: link
