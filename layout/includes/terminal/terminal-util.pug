@@ -20,7 +20,9 @@ mixin _terminal_render_outputs(outputs)
     br
 
 mixin terminal_exec(pwd, cmd, outputs)
-  | #{config.author}:~/#{pwd}$
+  if pwd
+    - pwd = "/"+pwd
+  | #{config.author}:~#{pwd}$
   |
   span(class="code-pl-input")= cmd
   br
