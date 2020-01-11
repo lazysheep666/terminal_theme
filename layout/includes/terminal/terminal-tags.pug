@@ -2,6 +2,6 @@ include terminal-util.pug
 
 - var outputs = []
 each tag in site.tags.data
-  - outputs.push({type:"url_intra", url:'#'+tag.name, text:tag.name, ending:" "})
+  - outputs.push({type:"url_intra", url:'/tags/#'+tag.name, text:tag.name, ending:" "})
 +terminal_exec("blog", "cat ./tags", outputs)
 br

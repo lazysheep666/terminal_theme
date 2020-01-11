@@ -2,6 +2,6 @@ include terminal-util.pug
 
 - var outputs = []
 each category in site.categories.data
-  - outputs.push({type:"url_intra", url:'#'+category.name, text:category.name})
+  - outputs.push({type:"url_intra", url:'/categories/#'+category.name, text:category.name})
 +terminal_exec("blog", "cat ./categories", outputs)
 br
