@@ -11,32 +11,56 @@ menu:
 
 # customize your terminal panel
 terminal:
-  #Home
-  Blog:
-    slogan: 
-      typ: string
-      val: No code no life. -- NekoDaemon
-  #About
-  NekoDaemon:
-    education: 
-      typ: string
-      val: Southern University of bullShit and Trash
-    interests:
-      typ: string
-      val: Embedded / Distributed / Heterogeneous System
-    github:
-      typ: link
-      val: github.com/Tonny-Gu
-      url: https://github.com/Tonny-Gu
-  #Tags
-  Tags:
-  #Categories
-  Categories:
-  #Post
-  Post:
+  home:
+    - pwd:
+      cmd: ssh nekodaemon.com
+      outputs:
+        - text: Welcome to NekoDebian 18.04 LTS
+        - text: " * Newest dalao's links are available at below."
 
-#social media
-#name: url
+  tags:
+  
+  categories:
+  
+  about:
+    - pwd:
+      cmd: whoami
+      outputs:
+        - text: NekoDaemon
+          ending: "@"
+        - type: url
+          url: https://github.com/Tonny-Gu
+          text: GitHub
+    - pwd:
+      cmd: whereis me
+      outputs:
+        - text: "me: Department of CSE @ Southern University of Science and Technology"
+    - pwd:
+      cmd: man NekoDaemon
+      outputs:
+        - text: "NekoDaemon(1)"
+        - text: ""
+        - text: "NAME"
+        - text: "NekoDaemon - The useless daemon doing nothing but spending money."
+        - text: ""
+        - text: "DESCRIPTION"
+        - text: "Interests: Embedded / Distributed / Heterogeneous System"
+        - text: "Email: nekodaemon__AT__hotmail__DOT__com"
+        - text: "One-More-Word: Thanks for visiting my blog. I glad to meet you there and hope my articles are helpful to you."
+
+  post:
+
+  Links:
+    spinmry: https://blog.spinmry.moe
+    laekov: https://laekov.com.cn
+    
+disqus: NekoDaemon
+license:
+  name: CC-BY-SA 4.0
+  url: https://creativecommons.org/licenses/by-sa/4.0/
+
+# social media
+# name: url
 social:
   # github: https://github.com/lazysheep666
   # weibo: https://weibo.com/u/5318061001
@@ -60,5 +84,7 @@ third_party:
     velocity: /js/third-party/velocity.min.js 
     velocity-ui: /js/third-party/velocity.ui.min.js 
   css:
-    font-awsome: https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+    # font-awsome: https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+    font-awsome: https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css
+    
 

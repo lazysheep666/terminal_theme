@@ -5,6 +5,8 @@ block content
     a.article-title= page.title || 'No Title'
     time.article-date #[i(class="fa fa-calendar" aria-hidden="true")] !{date(page.date, config.date_format)}
     != page.content
+  article#post
+    include includes/disqus.pug
   include includes/pagination.pug
   
   

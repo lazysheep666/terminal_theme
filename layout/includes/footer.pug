@@ -5,5 +5,8 @@
         a.social-icon(href=url target="_blank")
           i.fa(class='fa-'+name)
   p.design-info
-    | Powered by #[a(href="https://hexo.io" target="_blank") Hexo] | Theme based on #[a(href="https://github.com/lazysheep666/terminal_theme" target="_blank") Teminal] modified by NekoDaemon
-  p.copyright= `CC BY-SA 4.0 Licensed | Copyright © ${new Date().getFullYear()} ${config.author}` 
+    | Powered by #[a(href="https://hexo.io" target="_blank") Hexo] | Theme #[a(href="https://github.com/lazysheep666/terminal_theme" target="_blank") Teminal] (#[a(href="https://github.com/Tonny-Gu/terminal_theme" target="_blank") NekoDaemon Remix])
+  p.copyright
+    a(href=theme.license.url target="_blank")= theme.license.name
+    | 
+    | Licensed | Copyright © #{new Date().getFullYear()} #{config.author}

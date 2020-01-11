@@ -1,29 +1,56 @@
-br
-br
-if page.categories
-  | > #{objName}.category
-  br
-  each val in page.categories.data
-    a(href='/categories/#' + val.name class="category")
-      span= val.name
-  br
-  br
+include terminal-util
+
+- var title = page.title || 'default'
+- var filename = '"'+title+'.sh"'
+- var outputs = []
+
+- outputs.push({text:"CREATED_DATE = "+date(page.date, config.date_format)})
+- outputs.push({text:"UPDATED_DATE = "+date(page.updated, config.date_format)})
+
 if page.tags.data
-  | > #{objName}.tags
-  br
-  each val in page.tags.data
-    a(href='/tags/#'+val.name class="tag")
-      span= val.name
-  br
-  br
-if page.next
+  - outputs.push({text:"TAGS =", ending:" "})
+  each tag, index in page.tags.data
+    - outputs.push({type:"url_intra", url:'/tags/#'+tag.name, text:tag.name, ending:" "})
+    if !(index==page.tags.data.length - 1)
+      - outputs.push({text:":", ending:" "})
+  - outputs.push({text:""})
+
+if page.categories.data
+  - outputs.push({text:"CATEGORIES =", ending:" "})
+  each category, index in page.categories.data
+    - outputs.push({type:"url_intra", url:'/categories/#'+category.name, text:category.name, ending:" "})
+    if !(index==page.categories.data.length - 1)
+      - outputs.push({text:":", ending:" "})
+  - outputs.push({text:""})
+
++terminal_exec("blog", "source "+filename, false)
+br
++terminal_exec("blog", "printenv", outputs)
+br
++terminal_exec("blog", "grep -lr $TAGS post", false)
+
+- var articles = []
+if page.tags.data
+  each article in site.posts.data
+    if article.tags.data
+      - var isRelated = false
+      each tag in article.tags.data
+        each val in page.tags.data 
+          if val.name == tag.name
+            - isRelated = true
+      if isRelated
+        - articles.push(article)
+
++terminal_print_titles(articles)
+
+//if page.next
   | > #{objName}.prev
   br
   a(href=url_for(page.next.path))
     span.answer= page.next.title
   br
   br
-if page.prev
+//if page.prev
   | > #{objName}.next
   br
   a(href=url_for(page.prev.path))

@@ -1,15 +1,16 @@
+include terminal-util.pug
+
+include terminal-tags.pug
+include terminal-categories.pug
+
+- var thisYear = new Date().getFullYear()
+- var articles = []
+each article in site.posts.data
+  if date(article.date, "YYYY") == thisYear
+    - articles.push(article)
+
++terminal_exec("blog", "ls post/"+thisYear, false)
++terminal_print_titles(articles)
 br
-br
-| > Tags.all
-br
-each val in site.tags.data
-  a(href='/tags/#'+val.name class="tag")
-    span= val.name
-br
-br
-| > Categories.all 
-br
-each val in site.categories.data
-  a(href='/categories/#'+val.name class="category")
-    span= val.name
-  br
+
+include terminal-links.pug

@@ -1,0 +1,7 @@
+include terminal-util.pug
+
+- var outputs = []
+each url, name in theme.terminal.Links
+  - outputs.push({type:"url", url:url, text:name})
++terminal_exec("blog", "curl dalao.orz", outputs)
+br
