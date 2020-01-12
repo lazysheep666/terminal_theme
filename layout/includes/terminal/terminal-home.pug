@@ -3,14 +3,8 @@ include terminal-util.pug
 include terminal-tags.pug
 include terminal-categories.pug
 
-- var thisYear = new Date().getFullYear()
-- var articles = []
-each article in site.posts.data
-  if date(article.date, "YYYY") == thisYear
-    - articles.push(article)
-
-+terminal_exec("blog", "ls post/"+thisYear, false)
-+terminal_print_titles(articles)
++terminal_exec("blog", "ls post/part"+page.current, false)
++terminal_print_titles(page.posts.data)
 br
 
 include terminal-links.pug

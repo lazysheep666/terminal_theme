@@ -17,8 +17,10 @@ include ./terminal/terminal-util.pug
     if is_current("/categories")
       +terminal_print_cmd_in_yaml(theme.terminal.categories)
       include ./terminal/terminal-categories.pug
+      +terminal_print_archives()
     if is_current("/tags")
       +terminal_print_cmd_in_yaml(theme.terminal.tags)
       include ./terminal/terminal-tags.pug
+      +terminal_print_archives()
     if is_current("/about")
       +terminal_print_cmd_in_yaml(theme.terminal.about)

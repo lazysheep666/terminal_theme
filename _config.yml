@@ -41,7 +41,7 @@ terminal:
         - text: "NekoDaemon(1)"
         - text: ""
         - text: "NAME"
-        - text: "NekoDaemon - The useless daemon doing nothing but spending money."
+        - text: "NekoDaemon - The useless daemon doing nothing but wasting money."
         - text: ""
         - text: "DESCRIPTION"
         - text: "Interests: Embedded / Distributed / Heterogeneous System"
@@ -54,7 +54,9 @@ terminal:
     spinmry: https://blog.spinmry.moe
     laekov: https://laekov.com.cn
     
-disqus: NekoDaemon
+# disqus: NekoDaemon
+utterances: Tonny-Gu/blog_comments
+
 license:
   name: CC-BY-SA 4.0
   url: https://creativecommons.org/licenses/by-sa/4.0/

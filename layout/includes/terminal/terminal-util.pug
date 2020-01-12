@@ -43,4 +43,23 @@ mixin terminal_print_cmd_in_yaml(yaml_array)
     each yaml in yaml_array
       +terminal_exec(yaml.pwd, yaml.cmd, yaml.outputs)
       br
+
+mixin terminal_print_archives()
+  - var posts_by_year = []
+  each article in site.posts.data
+    - var year_non_exist = true
+    each archive in posts_by_year
+      if archive.year == date(article.date, "YYYY")
+        - year_non_exist = false
+        - archive.posts.push(article)
+    if year_non_exist
+      - posts_by_year.push({year:date(article.date, "YYYY"), posts:[article]})
   
+  each archive in posts_by_year
+    - archive.posts.sort(function(a, b) {return date(b.date, "MMDD")-date(a.date, "MMDD")})
+  - posts_by_year.sort(function(a, b) {return b.year-a.year})
+
+  each archive in posts_by_year
+    +terminal_exec("blog/archives", "tar -xf "+archive.year+".tar && ls posts", false)
+    +terminal_print_titles(archive.posts)
+    br
