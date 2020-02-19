@@ -13,10 +13,9 @@ menu:
 terminal:
   home:
     - pwd:
-      cmd: ssh nekodaemon.com
+      cmd: ssh cifangyiquan.net
       outputs:
-        - text: Welcome to NekoDebian 18.04 LTS
-        - text: " * Newest dalao's links are available at below."
+        - text: Welcome to cifangyiquan's blog
 
   tags:
   
@@ -26,36 +25,34 @@ terminal:
     - pwd:
       cmd: whoami
       outputs:
-        - text: NekoDaemon
+        - text: cifangyiquan
           ending: "@"
         - type: url
-          url: https://github.com/Tonny-Gu
+          url: https://github.com/hd264
           text: GitHub
     - pwd:
       cmd: whereis me
       outputs:
-        - text: "me: Department of CSE @ Southern University of Science and Technology"
+        - text: "me: Beijing, China"
     - pwd:
-      cmd: man NekoDaemon
+      cmd: man cifangyiqan
       outputs:
-        - text: "NekoDaemon(1)"
+        - text: "cifangyiquan(1)"
         - text: ""
         - text: "NAME"
-        - text: "NekoDaemon - The useless daemon doing nothing but wasting money."
+        - text: "cifangyiquan - a developer of software."
         - text: ""
         - text: "DESCRIPTION"
-        - text: "Interests: Embedded / Distributed / Heterogeneous System"
-        - text: "Email: nekodaemon__AT__hotmail__DOT__com"
-        - text: "One-More-Word: Thanks for visiting my blog. I glad to meet you there and hope my articles are helpful to you."
+        - text: "Interests: ACG, machine learning, football, basketball, baseball, staying at home"
+        - text: "Email: lg_329__AT__163__DOT__com"
 
   post:
 
   Links:
-    spinmry: https://blog.spinmry.moe
-    laekov: https://laekov.com.cn
+    xxx: https://xxx
     
-# disqus: NekoDaemon
-utterances: Tonny-Gu/blog_comments
+# disqus: cifangyiquan
+utterances: cifangyiquan/blog_comments
 
 license:
   name: CC-BY-SA 4.0
