@@ -13,9 +13,10 @@ menu:
 terminal:
   home:
     - pwd:
-      cmd: ssh cifangyiquan.net
+      cmd: ssh BLOG_URL
       outputs:
-        - text: Welcome to cifangyiquan's blog
+        - text: Welcome to BLOG_NAME
+        - text: "xxx"
 
   tags:
   
@@ -25,34 +26,36 @@ terminal:
     - pwd:
       cmd: whoami
       outputs:
-        - text: cifangyiquan
+        - text: AUTHOR_NAME
           ending: "@"
         - type: url
-          url: https://github.com/hd264
+          url: https://github.com/AUTHOR_NAME
           text: GitHub
     - pwd:
       cmd: whereis me
       outputs:
-        - text: "me: Beijing, China"
+        - text: "me: location"
     - pwd:
-      cmd: man cifangyiqan
+      cmd: man AUTHOR_NAME
       outputs:
-        - text: "cifangyiquan(1)"
+        - text: "AUTHOR_NAME(1)"
         - text: ""
         - text: "NAME"
-        - text: "cifangyiquan - a developer of software."
+        - text: "SELFINTRODUCTION - xxx"
         - text: ""
         - text: "DESCRIPTION"
-        - text: "Interests: ACG, machine learning, football, basketball, baseball, staying at home"
-        - text: "Email: lg_329__AT__163__DOT__com"
+        - text: "Interests: xxx"
+        - text: "Email: xxx"
+        - text: "xxx"
 
   post:
 
   Links:
     xxx: https://xxx
+    xxx: https://xxx
     
-# disqus: cifangyiquan
-utterances: cifangyiquan/blog_comments
+# disqus: disqus_name
+utterances: xxx/blog_comments
 
 license:
   name: CC-BY-SA 4.0
@@ -61,8 +64,7 @@ license:
 # social media
 # name: url
 social:
-  # github: https://github.com/lazysheep666
-  # weibo: https://weibo.com/u/5318061001
+  # github: https://github.com/xxx
   
 # Miscelaneous
 favicon: /favicon.ico
