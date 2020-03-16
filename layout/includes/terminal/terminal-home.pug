@@ -1,0 +1,10 @@
+include terminal-util.pug
+
+include terminal-tags.pug
+include terminal-categories.pug
+
++terminal_exec("blog", "ls post/part"+page.current, false)
++terminal_print_titles(page.posts.data)
+br
+
+include terminal-links.pug

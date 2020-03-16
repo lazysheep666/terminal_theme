@@ -1,0 +1,65 @@
+mixin _terminal_render_outputs(outputs)
+  - var hasNewLine = false
+  each output in outputs
+    case output.type
+      when "url"
+        a(href= output.url class="code-pl-output-url" target="_blank")
+          span(class="code-pl-output")= output.text
+      when "url_intra"
+        a(href= output.url class="code-pl-output-url")
+          span(class="code-pl-output")= output.text
+      default
+        span(class="code-pl-output")= output.text
+    if output.ending
+      span(class="code-pl-output")= output.ending
+      - hasNewLine = false
+    else
+      br
+      - hasNewLine = true
+  if !hasNewLine
+    br
+
+mixin terminal_exec(pwd, cmd, outputs)
+  if pwd
+    - pwd = "/"+pwd
+  | #{config.author}:~#{pwd}$
+  |
+  span(class="code-pl-input")= cmd
+  br
+  if outputs
+    +_terminal_render_outputs(outputs)
+
+mixin terminal_print_titles(articles)
+  - var outputs = []
+  each article in articles
+    - var title = article.title || 'No Title'
+    - var url = article.link || article.path
+    - outputs.push({text:date(article.date, config.date_format), ending:" "})
+    - outputs.push({type:"url", url:url_for(url), text:title})
+  +_terminal_render_outputs(outputs)
+
+mixin terminal_print_cmd_in_yaml(yaml_array)
+  if yaml_array
+    each yaml in yaml_array
+      +terminal_exec(yaml.pwd, yaml.cmd, yaml.outputs)
+      br
+
+mixin terminal_print_archives()
+  - var posts_by_year = []
+  each article in site.posts.data
+    - var year_non_exist = true
+    each archive in posts_by_year
+      if archive.year == date(article.date, "YYYY")
+        - year_non_exist = false
+        - archive.posts.push(article)
+    if year_non_exist
+      - posts_by_year.push({year:date(article.date, "YYYY"), posts:[article]})
+  
+  each archive in posts_by_year
+    - archive.posts.sort(function(a, b) {return date(b.date, "MMDD")-date(a.date, "MMDD")})
+  - posts_by_year.sort(function(a, b) {return b.year-a.year})
+
+  each archive in posts_by_year
+    +terminal_exec("blog/archives", "tar -xf "+archive.year+".tar && ls posts", false)
+    +terminal_print_titles(archive.posts)
+    br

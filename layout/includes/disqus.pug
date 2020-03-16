@@ -1,0 +1,59 @@
+// Author: maupassant-hexo (https://github.com/tufu9441/maupassant-hexo/blob/master/layout/_partial/comments.pug)
+
+if theme.disqus
+  #disqus_thread
+    .btn_click_load
+      div.disqus_click_btn 
+        a.article-comment 阅读评论（请确保 Disqus 可以正常加载）
+    script(type='text/javascript').
+      var disqus_config = function () {
+          this.page.url = '#{config.url}/#{page.path}';
+          this.page.identifier = '#{page.path}';
+          this.page.title = '#{page.title}';
+        };
+    script(type='text/javascript' id='disqus-lazy-load-script').
+      $.ajax({
+      url: 'https://disqus.com/next/config.json',
+      timeout: 2500,
+      type: 'GET',
+      success: function(){
+        var d = document;
+        var s = d.createElement('script');
+        s.src = '//#{theme.disqus}.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', + new Date());
+        (d.head || d.body).appendChild(s);
+        $('.disqus_click_btn').css('display', 'none');
+      },
+      error: function() {
+        $('.disqus_click_btn').css('display', 'block');
+      }
+      });
+    script(type='text/javascript' id='disqus-click-load').
+      $('.btn_click_load').click(() => {  //click to load comments
+          (() => { // DON'T EDIT BELOW THIS LINE
+              var d = document;
+              var s = d.createElement('script');
+              s.src = '//#{theme.disqus}.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', + new Date());
+              (d.head || d.body).appendChild(s);
+          })();
+          $('.disqus_click_btn').css('display','none');
+      });
+    script(type='text/javascript' id='disqus-count-script').
+      $(function() {
+           var xhr = new XMLHttpRequest();
+           xhr.open('GET', '//disqus.com/next/config.json', true);
+           xhr.timeout = 2500;
+           xhr.onreadystatechange = function () {
+             if (xhr.readyState === 4 && xhr.status === 200) {
+               $('.post-meta .post-comments-count').show();
+               var s = document.createElement('script');
+               s.id = 'dsq-count-scr';
+               s.src = 'https://#{theme.disqus}.disqus.com/count.js';
+               s.async = true;
+               (document.head || document.body).appendChild(s);
+             }
+           };
+           xhr.ontimeout = function () { xhr.abort(); };
+           xhr.send(null);
+         });

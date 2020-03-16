@@ -5,48 +5,66 @@ language: zh-Hans
 # main menu navigation
 menu:
   Home: /
-  About: /about
   Tags: /tags
+  Categories: /categories
+  About: /about
 
 # customize your terminal panel
 terminal:
-  #Home
-  Blog:
-    purpose: 
-      typ: string
-      val: Sharing something interesting in my limited life.
-    author: 
-      typ: string
-      val: LazySheep
-    more:
-      typ: link
-      val: check here
-      url: https://github.com/lazysheep666/lazysheep666.github.io
-  #About
-  Sheep:
-    locations: 
-      typ: array
-      val: Beijng Chongqing
-    education: 
-      typ: string
-      val: BUPT
-    interests:
-      typ: array
-      val: coding basketball sleeping reading
-    github:
-      typ: link
-      val: github.com/lazysheep666
-      url: https://github.com/lazysheep666
-  #Tags
-  Tags:
-  #Post
-  Post:
+  home:
+    - pwd:
+      cmd: ssh BLOG_URL
+      outputs:
+        - text: Welcome to BLOG_NAME
+        - text: "xxx"
 
-#social media
-#name: url
+  tags:
+  
+  categories:
+  
+  about:
+    - pwd:
+      cmd: whoami
+      outputs:
+        - text: AUTHOR_NAME
+          ending: "@"
+        - type: url
+          url: https://github.com/AUTHOR_NAME
+          text: GitHub
+    - pwd:
+      cmd: whereis me
+      outputs:
+        - text: "me: location"
+    - pwd:
+      cmd: man AUTHOR_NAME
+      outputs:
+        - text: "AUTHOR_NAME(1)"
+        - text: ""
+        - text: "NAME"
+        - text: "SELFINTRODUCTION - xxx"
+        - text: ""
+        - text: "DESCRIPTION"
+        - text: "Interests: xxx"
+        - text: "Email: xxx"
+        - text: "xxx"
+
+  post:
+
+  Links:
+    xxx: https://xxx
+    xxx: https://xxx
+    
+# disqus: disqus_name
+utterances: xxx/blog_comments
+
+license:
+  name: CC-BY-SA 4.0
+  url: https://creativecommons.org/licenses/by-sa/4.0/
+
+# social media
+# name: url
 social:
-  # github: https://github.com/lazysheep666
-  # weibo: https://weibo.com/u/5318061001
+  # github: https://github.com/xxx
   
 # Miscelaneous
 favicon: /favicon.ico
@@ -67,5 +85,7 @@ third_party:
     velocity: /js/third-party/velocity.min.js 
     velocity-ui: /js/third-party/velocity.ui.min.js 
   css:
-    font-awsome: https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+    # font-awsome: https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+    font-awsome: https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css
+    
 

@@ -1,8 +1,7 @@
+include terminal-util.pug
+
+- var outputs = []
+each category in site.categories.data
+  - outputs.push({type:"url_intra", url:'/categories/#'+category.name, text:category.name})
++terminal_exec("blog", "cat ./categories", outputs)
 br
-br
-| > #{objName}.all 
-br
-each val in site.categories.data
-  a(href='#'+val.name class="category")
-    span= val.name
-  br
