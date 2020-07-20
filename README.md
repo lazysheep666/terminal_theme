@@ -16,4 +16,4 @@
 
 ### Live Demo
 
-[blog.lazysheep.fun](https://blog.lazysheep.fun)
+[blog.lazysheep.fun](https://lazysheep666.github.io)
