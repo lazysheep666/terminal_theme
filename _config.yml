@@ -1,4 +1,3 @@
-
 # html lang
 language: zh-Hans
 
@@ -19,9 +18,9 @@ terminal:
         - text: "xxx"
 
   tags:
-  
+
   categories:
-  
+
   about:
     - pwd:
       cmd: whoami
@@ -52,8 +51,7 @@ terminal:
 
   Links:
     xxx: https://xxx
-    xxx: https://xxx
-    
+
 # disqus: disqus_name
 utterances: xxx/blog_comments
 
@@ -65,27 +63,25 @@ license:
 # name: url
 social:
   # github: https://github.com/xxx
-  
+
 # Miscelaneous
 favicon: /favicon.ico
 
 # stylesheets loaded in the <head>
 stylesheets:
-- /css/index.css
+  - /css/index.css
 
 # scripts loaded in the end of the body
 scripts:
-- /js/nav.js
-- /js/scroll.js
-- /js/index.js
+  - /js/nav.js
+  - /js/scroll.js
+  - /js/index.js
 # the third-party loaded in the head
 third_party:
   js:
     jquery: /js/third-party/jquery.min.js
-    velocity: /js/third-party/velocity.min.js 
-    velocity-ui: /js/third-party/velocity.ui.min.js 
+    velocity: /js/third-party/velocity.min.js
+    velocity-ui: /js/third-party/velocity.ui.min.js
   css:
     # font-awsome: https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
     font-awsome: https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css
-    
-
